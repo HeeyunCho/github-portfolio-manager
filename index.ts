@@ -1,4 +1,4 @@
-import { Server } from "@modelcontextprotocol/sdk/server/index.js";
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { spawn } from "child_process";
@@ -7,15 +7,10 @@ import * as path from "path";
 
 const PROJECTS_ROOT = "C:\\gemini_project";
 
-const server = new Server(
+const server = new McpServer(
   {
     name: "github-portfolio-manager",
     version: "1.0.0",
-  },
-  {
-    capabilities: {
-      tools: {},
-    },
   }
 );
 

@@ -1,0 +1,16 @@
+{
+  "name": "github-portfolio-manager",
+  "version": "1.0.0",
+  "description": "Portfolio management server for synchronizing local projects with GitHub.",
+  "main": "dist/index.js",
+  "tools": [
+    {
+      "name": "sync_all_projects",
+      "description": "Scans the workspace and prepares git synchronization for all active projects."
+    },
+    {
+      "name": "generate_profile_readme",
+      "description": "Generates a professional GitHub Profile README based on local project metadata."
+    }
+  ]
+}

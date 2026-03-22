@@ -1,0 +1,14 @@
+@startuml
+package "github-portfolio-manager" {
+    class "Portfolio Server" {
+        + sync_all_projects()
+        + generate_profile_readme(github_username, name, bio)
+    }
+    
+    class "Shell Utilities" {
+        + runCommand(command, args, cwd)
+    }
+    
+    "Portfolio Server" --> "Shell Utilities" : "Uses"
+}
+@enduml
